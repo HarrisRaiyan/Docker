@@ -5,7 +5,7 @@ for set the port number for docker - docker run -itd -p 8080:80 httpd
 to see the docker image - docker image
 to see the running docker containers - docker ps -a
 to access the docker - docker exec -it (docker container id) /bin/bash
-
+to create a customize image - docker commit container id name
 
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
