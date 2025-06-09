@@ -7,6 +7,10 @@ to see the running docker containers - docker ps -a
 to access the docker - docker exec -it (docker container id) /bin/bash
 to create a customize image - docker commit container id name
 to take backup of the image - docker save -o /path/myimagename.tar nameoftheimage
+for taking backup in remote vai docker hub
+first login docker in machine - docker login 
+second tag that docker image with userid like - docker tag imagename userid/imagename
+third push the docker image to docker hub - docker push imagename
 
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
