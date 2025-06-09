@@ -14,6 +14,7 @@ third push the docker image to docker hub - docker push imagename
 to delete the docker container docker rm -f containerid
 to delete the docker image - docker rmi -f imagename
 from the local backup of the image restore- docker load -i nameofthefile.tar on current directory.
+to sync the folder in local machine to container- docker run -itd -p 8080:80 -- name (nameofthecontainer) -v "/path/:/topath/" nameoftheimage
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
 touch Dockerfile
