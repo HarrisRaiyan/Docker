@@ -15,6 +15,21 @@ to delete the docker container docker rm -f containerid
 to delete the docker image - docker rmi -f imagename
 from the local backup of the image restore- docker load -i nameofthefile.tar on current directory.
 to sync the folder in local machine to container- docker run -itd -p 8080:80 -- name (nameofthecontainer) -v "/path/:/topath/" nameoftheimage
+
+
+for login the ssh need the userid for that when creating the image need to add this 
+from ubuntu:16.04
+MAINTAINER:HARRIS
+RUN apt-get update
+RUN apt-get install openssh-server -y
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN echo 'root:root123 | chpasswd
+RUN mkdir /var/run/sshd
+CMD ["/usr/sbin/sshd","D"]S
+
+
+can access this container using ssh only need to change the -p 2222:22
+
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
 touch Dockerfile
