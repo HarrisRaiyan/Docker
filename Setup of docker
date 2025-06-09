@@ -1,3 +1,10 @@
+to install docker apt install docker.io
+to pull the docker image from online docker pull httpd(dockerhub)
+to run the docker image - docker run -itd -P httpd 
+for set the port number for docker - docker run -itd -p 8080:80 httpd
+
+
+
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
 touch Dockerfile
