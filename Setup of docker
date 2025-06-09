@@ -13,6 +13,7 @@ second tag that docker image with userid like - docker tag imagename userid/imag
 third push the docker image to docker hub - docker push imagename
 to delete the docker container docker rm -f containerid
 to delete the docker image - docker rmi -f imagename
+from the local backup of the image restore- docker load -i nameofthefile.tar on current directory.
 mkdir jenkins-with-terraform
 cd jenkins-with-terraform
 touch Dockerfile
