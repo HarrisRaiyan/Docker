@@ -16,6 +16,10 @@ to delete the docker image - docker rmi -f imagename
 from the local backup of the image restore- docker load -i nameofthefile.tar on current directory.
 to sync the folder in local machine to container- docker run -itd -p 8080:80 -- name (nameofthecontainer) -v "/path/:/topath/" nameoftheimage
 
+if the image commit without it will come like <none> for this have to give tag - docker images -f "dangling=true"
+after adding the tag in docker image then have to use this - docker rmi $(docker images -f "dangling=true" -q)
+
+
 
 for login the ssh need the userid for that when creating the image need to add this 
 from ubuntu:16.04
