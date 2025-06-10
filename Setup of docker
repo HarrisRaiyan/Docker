@@ -18,7 +18,7 @@ to sync the folder in local machine to container- docker run -itd -p 8080:80 -- 
 
 if the image commit without it will come like <none> for this have to give tag - docker images -f "dangling=true"
 after adding the tag in docker image then have to use this - docker rmi $(docker images -f "dangling=true" -q)
-
+delete all unused images docker system prune -a
 
 
 for login the ssh need the userid for that when creating the image need to add this 
