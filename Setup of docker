@@ -45,3 +45,6 @@ docker run -d -p 8080:8080 -p 50000:50000 --name jt-container jenkins-terraform
 -p 8080:8080 to open the port number for application 
 for host and container use for additional port 
 --name this used for container name and the last image name of the docker
+
+after login the docker in machine the details of user and password will be saved in the path of the local machine /docker.io/config.json/
+in this file details will be encrepted
